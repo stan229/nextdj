@@ -1,0 +1,12 @@
+.mixer-component {
+  -webkit-box-flex: 1;
+}
+
+.mixer {
+  display: -webkit-box;
+  height: 300px;
+  -webkit-box-pack: justify;
+  .channel {
+    -webkit-box-flex: 1;
+  }
+}
