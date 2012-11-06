@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25f96638-39ea-4a73-82c0-cacf80b8e3b3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Deck.js" afterPath="$PROJECT_DIR$/app/view/Deck.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" afterPath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
-    </list>
+    <list default="true" id="25f96638-39ea-4a73-82c0-cacf80b8e3b3" name="Default" comment="" />
     <ignored path="nexdj.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
