@@ -9,11 +9,11 @@ Ext.define("NextDJ.view.Main", {
         items      : [
             {
                 xtype : 'deckcontainer'
-            },
-            {
-                xtype : 'component',
-                html  : "songs here HELLO WORLD"
             }
+//            {
+//                xtype : 'component',
+//                html  : "songs here HELLO WORLD"
+//            }
         ]
     }
 });

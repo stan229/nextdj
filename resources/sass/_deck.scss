@@ -2,8 +2,15 @@
   -webkit-box-flex: 1;
 }
 
+.pitch {
+  background-color: #fff;
+  height: 100px !important;
+  width: 20px !important;
+  margin-right: 10px;
+}
+
 .cursor {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   height: 100%;
@@ -13,10 +20,11 @@
 }
 
 .timeline {
-  width: 600px;
+  width: 550px;
   height: 100px;
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
 }
 
 .deck-buttons {
