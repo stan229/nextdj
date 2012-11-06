@@ -13,6 +13,7 @@ Ext.define("NextDJ.view.Deck", {
         styleHtmlContent : true,
         waveSurfer       : null,
         trackTitle       : null,
+        pitchOffset      : null,
         cuePosition      : null,
         tpl              : ''.concat(
             '<div class="deck">',
@@ -75,9 +76,12 @@ Ext.define("NextDJ.view.Deck", {
             newRate      = 1 - (pitchOffset / 100);
             backend      = this.getWaveSurfer().backend;
         if(backend.source) {
-            backend.source.playbackRate.value = 1 - (pitchOffset / 100);
+            backend.source.playbackRate.value = newRate;
+            backend.startPlaybackRate = null;
+        } else {
+            backend.startPlaybackRate = newRate;
         }
-        this.updatePitch(pitchOffset);
+        this.setPitchOffset(pitchOffset);
     },
     onTap : function (evtObj) {
         var me         = this,
@@ -125,10 +129,10 @@ Ext.define("NextDJ.view.Deck", {
         this.setWaveSurfer(waveSurfer);
         this.setTrackTitle(songSrc);
     },
-    applyTrackTitle : function(trackName) {
+    applyTrackTitle : function (trackName) {
         this.element.down('.track-title').setHtml(trackName);
     },
-    updatePitch : function(pitchOffset) {
+    applyPitchOffset : function (pitchOffset) {
         var pitchAmount = 0.0;
         if (pitchOffset > 0) {
             pitchAmount = "-" + pitchOffset.toFixed(1) + "%";
