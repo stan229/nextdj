@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25f96638-39ea-4a73-82c0-cacf80b8e3b3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/app.css" afterPath="$PROJECT_DIR$/resources/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/app.scssc" afterPath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/app.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/app.scss" afterPath="$PROJECT_DIR$/resources/sass/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/Main.js" afterPath="$PROJECT_DIR$/app/controller/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" afterPath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
     </list>
     <ignored path="nexdj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +27,7 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webaudio.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="61" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
+            <state line="37" column="5" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -46,7 +36,7 @@
       <file leaf-file-name="wavesurfer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="450" selection-end="464" vertical-scroll-proportion="0.0">
+            <state line="73" column="18" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,9 +73,7 @@
         <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="188" column="4" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,10 +87,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_deck.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_deck.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/sass/_deck.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="374" selection-end="374" vertical-scroll-proportion="0.5479452">
+            <state line="80" column="20" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webaudio.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="53" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.41095892">
               <folding />
             </state>
           </provider>
@@ -124,21 +121,20 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/dragdealer/dragdealer.css" />
         <option value="$PROJECT_DIR$/app/view/DeckContainer.js" />
-        <option value="$PROJECT_DIR$/app/controller/Main.js" />
         <option value="$PROJECT_DIR$/resources/sass/_mixer.scss" />
         <option value="$PROJECT_DIR$/app/view/Mixer.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/view/Main.js" />
         <option value="$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js" />
         <option value="$PROJECT_DIR$/app/view/Deck.js" />
-        <option value="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/sass/_deck.scss" />
+        <option value="$PROJECT_DIR$/app/controller/Main.js" />
+        <option value="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-157" />
     <option name="y" value="136" />
     <option name="width" value="1920" />
     <option name="height" value="878" />
@@ -243,7 +239,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,12 +327,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -384,10 +381,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-157" y="136" width="1920" height="878" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="136" width="1920" height="878" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -401,6 +397,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -461,65 +458,49 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wavesurfer/audio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="339" selection-end="339" vertical-scroll-proportion="0.32876712">
-          <folding />
-        </state>
+        <state line="15" column="26" selection-start="339" selection-end="339" vertical-scroll-proportion="0.32876712" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/_mixer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.21917808">
-          <folding />
-        </state>
+        <state line="10" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.21917808" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/Mixer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="735" selection-end="735" vertical-scroll-proportion="0.46027398">
-          <folding />
-        </state>
+        <state line="21" column="51" selection-start="735" selection-end="735" vertical-scroll-proportion="0.46027398" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="215" selection-end="215" vertical-scroll-proportion="0.24109589">
-          <folding />
-        </state>
+        <state line="11" column="14" selection-start="215" selection-end="215" vertical-scroll-proportion="0.24109589" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wavesurfer/drawer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="24" selection-start="679" selection-end="679" vertical-scroll-proportion="-0.9506849">
-          <folding />
-        </state>
+        <state line="26" column="24" selection-start="679" selection-end="679" vertical-scroll-proportion="-0.9506849" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="79" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.6822695">
+        <state line="58" column="79" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.6822695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.js">
+    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="4" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+        <state line="73" column="18" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -531,20 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="450" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="61" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/Deck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="44" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0">
@@ -552,9 +519,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
+    <entry file="file://$PROJECT_DIR$/app/view/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="4" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -568,7 +542,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/_deck.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="374" selection-end="374" vertical-scroll-proportion="0.5479452">
+        <state line="80" column="20" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="53" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.41095892">
           <folding />
         </state>
       </provider>

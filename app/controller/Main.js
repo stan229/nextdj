@@ -36,9 +36,5 @@ Ext.define('NextDJ.controller.Main', {
         if(backend.gainNode) {
             backend.gainNode.gain.value = newVol;
         }
-
-
-
-
     }
 });
