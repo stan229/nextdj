@@ -1,0 +1,45 @@
+.track-browser-cmp {
+  -webkit-box-flex: 1;
+}
+
+.track-browser {
+  .track {
+    //padding:
+    margin: 25px;
+    .track-name {
+      vertical-align: middle;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .deck-chooser {
+      float: right;
+      display: -webkit-box;
+      -webkit-box-align: end;
+      .deck-button {
+        margin: 5px;
+        -webkit-box-flex: 1;
+        border-top: 1px solid #96d1f8;
+        background: #65a9d7;
+        background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+        background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+        padding: 5px 15px;
+        -webkit-border-radius: 5px;
+        -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+        text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+        vertical-align: middle;
+      }
+      .deck-button:hover {
+        border-top-color: #28597a;
+        background: #28597a;
+        color: #ccc;
+      }
+      .deck-button:active {
+        border-top-color: #85ceff;
+        background: #85ceff;
+      }
+    }
+  }
+}

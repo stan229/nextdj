@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25f96638-39ea-4a73-82c0-cacf80b8e3b3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/DeckChooserOverlay.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/TrackBrowser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/knob/jquery.knob.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/sass/_trackbrowser.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/Main.js" afterPath="$PROJECT_DIR$/app/controller/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Deck.js" afterPath="$PROJECT_DIR$/app/view/Deck.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/DeckContainer.js" afterPath="$PROJECT_DIR$/app/view/DeckContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Main.js" afterPath="$PROJECT_DIR$/app/view/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Mixer.js" afterPath="$PROJECT_DIR$/app/view/Mixer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js" afterPath="$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" afterPath="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/app.css" afterPath="$PROJECT_DIR$/resources/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/_mixer.scssc" afterPath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/_mixer.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/app.scssc" afterPath="$PROJECT_DIR$/resources/sass/.sass-cache/703f42e1e27caca5eb0613eb0639acc1a2d46a9b/app.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/_mixer.scss" afterPath="$PROJECT_DIR$/resources/sass/_mixer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/app.scss" afterPath="$PROJECT_DIR$/resources/sass/app.scss" />
     </list>
     <ignored path="nexdj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,52 +43,7 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="5" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wavesurfer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="18" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeckContainer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/DeckContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Deck.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/Deck.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="44" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/Main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dragdealer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="4" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.0">
+            <state line="126" column="29" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,25 +52,72 @@
       <file leaf-file-name="app.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="21" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
+            <state line="37" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_deck.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/sass/_deck.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="20" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webaudio.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="webaudio.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="53" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.41095892">
+            <state line="115" column="41" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Deck.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/Deck.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="126" column="39" selection-start="3948" selection-end="3949" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackBrowser.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/TrackBrowser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="73" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_trackbrowser.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/sass/_trackbrowser.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckContainer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/DeckContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="25" selection-start="0" selection-end="684" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckChooserOverlay.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/DeckChooserOverlay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="36" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#96#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wavesurfer.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="0" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.36438355">
               <folding />
             </state>
           </provider>
@@ -118,19 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/dragdealer/dragdealer.css" />
-        <option value="$PROJECT_DIR$/app/view/DeckContainer.js" />
+        <option value="$PROJECT_DIR$/resources/sass/_deck.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/resources/sass/_mixer.scss" />
         <option value="$PROJECT_DIR$/app/view/Mixer.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/view/Main.js" />
-        <option value="$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js" />
-        <option value="$PROJECT_DIR$/app/view/Deck.js" />
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
-        <option value="$PROJECT_DIR$/resources/sass/_deck.scss" />
-        <option value="$PROJECT_DIR$/app/controller/Main.js" />
         <option value="$PROJECT_DIR$/lib/wavesurfer/webaudio.js" />
+        <option value="$PROJECT_DIR$/app/view/Main.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
+        <option value="$PROJECT_DIR$/app/view/DeckContainer.js" />
+        <option value="$PROJECT_DIR$/app/view/DeckChooserOverlay.js" />
+        <option value="$PROJECT_DIR$/resources/sass/_trackbrowser.scss" />
+        <option value="$PROJECT_DIR$/app/view/TrackBrowser.js" />
+        <option value="$PROJECT_DIR$/app/view/Deck.js" />
+        <option value="$PROJECT_DIR$/app/controller/Main.js" />
+        <option value="$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js" />
       </list>
     </option>
   </component>
@@ -267,6 +288,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nexdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nextdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nexdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nextdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -288,8 +341,22 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dragdealer" />
+              <option name="myItemId" value="nexdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nextdj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,6 +401,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../d3" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -341,6 +409,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/knob" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib/jdataview" />
       <recent name="$PROJECT_DIR$/lib/dragdealer" />
@@ -382,7 +451,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="136" width="1920" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -456,90 +525,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/audio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="339" selection-end="339" vertical-scroll-proportion="0.32876712" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/_mixer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.21917808" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Mixer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="735" selection-end="735" vertical-scroll-proportion="0.46027398" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="215" selection-end="215" vertical-scroll-proportion="0.24109589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/drawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="24" selection-start="679" selection-end="679" vertical-scroll-proportion="-0.9506849" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="79" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.6822695" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="5" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="18" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/DeckContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Deck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="44" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dragdealer/dragdealer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="4" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="21" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/_deck.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="20" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
@@ -547,9 +532,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Mixer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="25" selection-start="3485" selection-end="3485" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/_mixer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="320" selection-end="320" vertical-scroll-proportion="0.43835616">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/drawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="26" selection-end="26" vertical-scroll-proportion="0.043835618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="0" selection-end="473" vertical-scroll-proportion="0.19726028">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdk/src/Panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.4931507">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/DeckChooserOverlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="36" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#96#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/DeckContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="25" selection-start="0" selection-end="684" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/wavesurfer/webaudio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="53" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.41095892">
+        <state line="115" column="41" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/_trackbrowser.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="12" selection-start="954" selection-end="954" vertical-scroll-proportion="0.6054795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/TrackBrowser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="73" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="29" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Deck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="39" selection-start="3948" selection-end="3949" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/wavesurfer/wavesurfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.36438355">
           <folding />
         </state>
       </provider>

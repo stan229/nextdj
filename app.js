@@ -27,15 +27,17 @@ Ext.application({
     },
 
     webAudioContext : null,
+    fileSystem      : null,
     launch          : function () {
+
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
+
         this.webAudioContext = new webkitAudioContext();
-        // Initialize the main view
-//        Ext.Viewport.add(Ext.create('NextDJ.view.Main'));
+
     },
 
-    onUpdated : function () {
+    onUpdated     : function () {
         Ext.Msg.confirm(
             "Application Update",
             "This application has just successfully been updated to the latest version. Reload now?",

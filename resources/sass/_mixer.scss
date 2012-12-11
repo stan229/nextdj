@@ -8,5 +8,14 @@
   -webkit-box-pack: justify;
   .channel {
     -webkit-box-flex: 1;
+    display: -webkit-box;
+  }
+
+  .eq {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 250px;
+    width: 75px;
+    margin: 20px;
   }
 }

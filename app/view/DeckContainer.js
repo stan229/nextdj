@@ -12,9 +12,10 @@ Ext.define("NextDJ.view.DeckContainer", {
         'NextDJ.view.Mixer'
     ],
     config   : {
-        cls    : 'deck-container',
-        layout : 'hbox',
-        items  : [
+        trackName : null,
+        cls       : 'deck-container',
+        layout    : 'hbox',
+        items     : [
             {
                 xtype    : 'deck',
                 deckType : 'A'

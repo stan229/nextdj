@@ -50,7 +50,23 @@ Ext.define("NextDJ.view.Deck", {
             tap   : me.onTap,
             scope : me
         });
-        me.loadSong();
+        me.initWaveSurfer();
+    },
+    initWaveSurfer : function() {
+         var me         = this,
+            element    = me.element,
+            canvas     = element.down('canvas').dom,
+            cursor     = element.down('.cursor').dom,
+            waveSurfer = Object.create(WaveSurfer);
+
+        waveSurfer.init({
+            canvas : canvas,
+            cursor : cursor,
+            color  : '#2e3047'
+        });
+
+        waveSurfer.bindDragNDrop(canvas, me);
+        this.setWaveSurfer(waveSurfer);
     },
     onPainted    : function() {
         var me         = this,
@@ -107,27 +123,9 @@ Ext.define("NextDJ.view.Deck", {
 
         }
     },
-    loadSong : function () {
-        var me         = this,
-            element    = me.element,
-            canvas     = element.down('canvas').dom,
-            cursor     = element.down('.cursor').dom,
-            waveSurfer = Object.create(WaveSurfer),
-            songSrc    = me.getDeckType() === "B" ? 'song2.mp3' : 'song.mp3';
-
-        waveSurfer.init({
-            canvas : canvas,
-            cursor : cursor,
-            color  : '#2e3047'
-        });
-
-
-        waveSurfer.load(songSrc);
-
-
-        waveSurfer.bindDragNDrop(canvas, me);
-        this.setWaveSurfer(waveSurfer);
-        this.setTrackTitle(songSrc);
+    loadSong : function (trackName) {
+        this.getWaveSurfer().loadFromFs(trackName);
+        this.setTrackTitle(trackName);
     },
     applyTrackTitle : function (trackName) {
         this.element.down('.track-title').setHtml(trackName);
