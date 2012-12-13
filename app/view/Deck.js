@@ -23,13 +23,13 @@ Ext.define("NextDJ.view.Deck", {
                         '<div class="pitch-bar handle"></div>',
                     '</div>',
                     '<div class="cursor {deckType}" id="wave-cursor-{deckType}"></div>',
-                    '<canvas id="wave-{deckType}" width="500" height="100"></canvas>',
+                    '<canvas id="wave-{deckType}" data-decktype="{deckType}" width="500" height="100"></canvas>',
                 '</div>',
                 '<div class="pitch-amount"></div>',
                 '<div class="track-title"></div>',
                 '<div class="deck-buttons">',
-                    '<div class="deck-button metal radial play">P</div>',
-                    '<div class="deck-button metal radial cue">C</div>',
+                    '<div class="deck-button metal radial play"><div class="play-icon"></div></div>',
+                    '<div class="deck-button metal radial cue">CUE</div>',
                 '</div>',
             '</div>'
         )
@@ -62,7 +62,7 @@ Ext.define("NextDJ.view.Deck", {
         waveSurfer.init({
             canvas : canvas,
             cursor : cursor,
-            color  : '#2e3047'
+            color  : '#EFD78F'
         });
 
         waveSurfer.bindDragNDrop(canvas, me);
@@ -102,26 +102,29 @@ Ext.define("NextDJ.view.Deck", {
     onTap : function (evtObj) {
         var me         = this,
             playButton = evtObj.getTarget('.play'),
-            cueButton  = evtObj.getTarget('.cue'),
+            cueButton  = evtObj.getTarget('.cue');
+
+        playButton && me.playPause();
+        cueButton  && me.cue();
+    },
+    playPause : function () {
+        this.getWaveSurfer().playPause();
+    },
+    cue      : function () {
+        var me         = this,
             waveSurfer = me.getWaveSurfer(),
             backend    = waveSurfer.backend,
             cuePosition;
 
-        if (playButton) {
-            waveSurfer.playPause();
+        cuePosition = me.getCuePosition();
+
+        if (!cuePosition || backend.paused) {
+            cuePosition = backend.getCurrentTime();
         }
-        if (cueButton) {
-            cuePosition = me.getCuePosition();
 
-            if (!cuePosition || backend.paused) {
-                cuePosition = backend.getCurrentTime();
-            }
+        backend.play(cuePosition);
 
-            backend.play(cuePosition);
-
-            me.setCuePosition(cuePosition);
-
-        }
+        me.setCuePosition(cuePosition);
     },
     loadSong : function (trackName) {
         this.getWaveSurfer().loadFromFs(trackName);

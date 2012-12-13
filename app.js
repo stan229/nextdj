@@ -2,11 +2,14 @@ Ext.application({
     name : 'NextDJ',
 
     requires : [
-        'Ext.MessageBox'
+        'Ext.Ajax',
+        'Ext.MessageBox',
+        'NextDJ.util.MIDIUtil'
     ],
 
     controllers : [
-        'Main'
+        'Main',
+        'MIDI'
     ],
     icon        : {
         '57'  : 'resources/icons/Icon.png',

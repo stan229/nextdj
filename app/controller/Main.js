@@ -20,28 +20,32 @@ Ext.define('NextDJ.controller.Main', {
             trackBrowser : 'trackbrowser'
         },
         control : {
-            'mixer' : {
+            'mixer'        : {
                 setVolume : 'onSetVolume',
                 eqChange  : 'onEqChange'
             },
             'trackbrowser' : {
+                addTrack  : 'onAddTrack',
                 loadTrack : 'onLoadTrack'
             }
         }
     },
     launch         : function () {
-
+        var me = this;
+        me.getApplication().on({
+            addTrack  : me.onAddTrack,
+            scope     : me
+        });
         Ext.Viewport.add({
             xtype : 'main'
         });
-        this.initFileSystem();
-
+        me.initFileSystem();
+        MIDIUtil.initMIDIMap();
     },
     initFileSystem : function () {
         var me = this,
             onInitFs = Ext.bind(me.onInitFs, me),
             onInitFsError = Ext.bind(me.onInitFsError, me);
-
 
         window.webkitStorageInfo.requestQuota(window.PERSISTENT, 256 * 1024 * 1024, function (grantedBytes) {
             window.webkitRequestFileSystem(window.PERSISTENT, grantedBytes, onInitFs, onInitFsError);
@@ -106,9 +110,9 @@ Ext.define('NextDJ.controller.Main', {
             backend = deck.getWaveSurfer().backend,
             newVol = -1 + volume;
 
-//        debugger;
         backend.startVolume = newVol;
         if (backend.gainNode) {
+            console.log(newVol);
             backend.gainNode.gain.value = newVol;
         }
     },
@@ -116,15 +120,31 @@ Ext.define('NextDJ.controller.Main', {
         var deck = Ext.ComponentQuery.query('deck[deckType="' + deckType + '"]')[0],
             backend = deck.getWaveSurfer().backend;
 
-        console.log(value);
-        window[eq + 'EQ'] = backend[eq + 'EQ'];
-//        backend[eq + 'EQ'].gain.value = value;
-
+        backend[eq + 'EQ'].gain.value = value;
     },
-    onLoadTrack   : function(track, deckType) {
+    onLoadTrack    : function (track, deckType) {
         var deck = Ext.ComponentQuery.query('deck[deckType="' + deckType + '"]')[0];
 
         deck.loadSong(track);
+    },
+    onAddTrack     : function (file, deckType) {
+        debugger;
+        var me = this,
+            fs = me.getApplication().fileSystem;
+
+        fs.root.getFile(file.name, {create : true, exclusive : true}, function (fileEntry) {
+            fileEntry.createWriter(function (fileWriter) {
+                debugger;
+                fileWriter.write(file);
+                me.loadTracks();
+                deckType && me.onLoadTrack(file.name, deckType);
+            }, function (writerError) {
+                console.log('write err', writerError);
+            });
+
+        }, function (fileEntryError) {
+            console.log('err', fileEntryError);
+        });
     }
 
 });

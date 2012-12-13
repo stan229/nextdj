@@ -11,7 +11,7 @@
          */
         html, body {
             height: 100%;
-            background-color: #1985D0
+            background-color: #1E1E1E;
         }
 
         #appLoadingIndicator {
@@ -51,7 +51,7 @@
     </style>
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
-    <script tyoe="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="lib/knob/jquery.knob.js"></script>
     <script type="text/javascript" src="lib/wavesurfer/wavesurfer.js"></script>
     <script type="text/javascript" src="lib/wavesurfer/webaudio.js"></script>
@@ -60,10 +60,17 @@
     <script type="text/javascript" src="lib/dragdealer/dragdealer.js"></script>
 </head>
 <body>
+    <div class="header"><div class="logo"></div></div>
     <div id="appLoadingIndicator">
         <div></div>
         <div></div>
         <div></div>
     </div>
+
+    <object id="Jazz1" classid="CLSID:1ACE1618-1C7D-4561-AEE1-34842AA85E90" class="hidden">
+      <object id="Jazz2" type="audio/x-jazz" class="hidden">
+    <p style="visibility:visible;">This page requires <a href=http://jazz-soft.net>Jazz-Plugin</a> ...</p>
+      </object>
+    </object>
 </body>
 </html>

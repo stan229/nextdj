@@ -1,45 +1,70 @@
 .track-browser-cmp {
   -webkit-box-flex: 1;
+  .drop-tracks {
+    margin-top: 20px;
+    text-align: center;
+    color: rgba(235, 137, 33, .6);
+  }
+  .x-scroll-view {
+    margin-top: -20px;
+    margin-bottom: 80px; // offset static header with logo
+  }
 }
 
 .track-browser {
   .track {
+     //background: rgba(60, 60, 60, .2);
     //padding:
-    margin: 25px;
+    //margin: 25px;
+    display: -webkit-box;
+    -webkit-box-align: justify;
     .track-name {
+      width: 80%;
+      -webkit-box-flex:1;
+      color: $light-orange;
       vertical-align: middle;
       font-size: 1em;
       font-weight: 600;
+      margin-top: 10px;
+    }
+    .spacer {
+      -webkit-box-flex:2;
     }
     .deck-chooser {
-      float: right;
+      -webkit-box-flex:.1;
+      //float: right;
       display: -webkit-box;
       -webkit-box-align: end;
       .deck-button {
+        width: 25px;
         margin: 5px;
         -webkit-box-flex: 1;
-        border-top: 1px solid #96d1f8;
+        border-top: 1px solid $orange;
         background: #65a9d7;
-        background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-        background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+        background: -webkit-gradient(linear, left top, left bottom, from($orange), to($light-orange));
+        background: -webkit-linear-gradient(top, $orange, $light-orange);
         padding: 5px 15px;
         -webkit-border-radius: 5px;
         -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
         text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
-        color: white;
+        color: black;
         font-size: 15px;
         text-decoration: none;
         vertical-align: middle;
+        text-align: center;
       }
       .deck-button:hover {
-        border-top-color: #28597a;
-        background: #28597a;
+        border-top-color: $orange;
+        background: $light-orange;
         color: #ccc;
       }
       .deck-button:active {
-        border-top-color: #85ceff;
-        background: #85ceff;
+        border-top-color: $orange;
+        background: $light-orange;
       }
     }
+  }
+  .track:nth-child(2n+1) {
+    background: rgba(60, 60, 60, .2);
   }
 }

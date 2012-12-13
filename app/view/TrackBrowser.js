@@ -10,13 +10,12 @@ Ext.define('NextDJ.view.TrackBrowser', {
     requires     : ['NextDJ.view.DeckChooserOverlay'],
     config       : {
         cls              : "track-browser-cmp",
-        scroll           : {
+        scrollable       : {
             direction : 'vertical'
         },
         styleHtmlContent : true,
         tpl              : ''.concat(
             '<div class="track-browser">',
-               '<div class="drop-tracks">Please Drop Tracks in Here</div>',
                 '<tpl for=".">',
                     '<div class="track">',
                         '<div class="track-name">{.}</div>',
@@ -27,7 +26,15 @@ Ext.define('NextDJ.view.TrackBrowser', {
                     '</div>',
                 '</tpl>',
             '</div>'
-        )
+        ),
+        items            : [
+            {
+                xtype  : 'component',
+                cls    : 'drop-tracks',
+                html   : '<div class="drop-tracks-inner">Drop Tracks in Here</div>',
+                docked : 'top'
+            }
+        ]
     },
     initialize   : function () {
         var me = this;
@@ -42,21 +49,8 @@ Ext.define('NextDJ.view.TrackBrowser', {
     },
     onDrop       : function (evtObj) {
         evtObj.preventDefault();
-        var me = this,
-            fs = NextDJ.fileSystem,
-            file = evtObj.dataTransfer.files[0];
-
-        fs.root.getFile(file.name, {create : true, exclusive : true}, function (fileEntry) {
-            fileEntry.createWriter(function (fileWriter) {
-                fileWriter.write(file);
-            }, function (writerError) {
-                console.log('write err', writerError);
-            });
-
-        }, function (fileEntryError) {
-            console.log('err', fileEntryError);
-        });
-
+        var file = evtObj.dataTransfer.files[0];
+        this.fireEvent('addTrack', file);
     },
     onDragEnd    : function (evtObj) {
         evtObj.preventDefault();

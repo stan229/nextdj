@@ -1,6 +1,13 @@
 //$page-bg-color: #1a1914;
 
-$page-bg-color: #a6bac5;
+//$page-bg-color: #a6bac5;
+$page-bg-color: #1E1E1E;
+
+$orange: saturate(#EB8921, 20%);
+$light-orange: #EFD78F;
+
+$base-color: $orange;
+
 @import 'sencha-touch/default/all';
 
 // You may remove any of the following modules that you
@@ -26,7 +33,20 @@ $page-bg-color: #a6bac5;
 
 html, body {
   width: 100%;
-  height: 100%
+  height: 100%;
+  color: $orange;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-style: none;
+  border-width: 0px;
+  max-width: 0px;
+  max-height: 0px;
 }
 
 [draggable] {
@@ -36,11 +56,25 @@ html, body {
   user-select: none;
 }
 
+.header {
+  width: 100%;
+  height: 80px;
+  background: -webkit-linear-gradient(top, #AAAAAA 0%, #1e1e1e 100%);
+  .logo {
+    background-image: inline-image("nextdj-logo.png");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: contain;
+    height: 80px;
+    width: 100%;
+  }
+}
 
 .next-dj-main > .x-inner {
-  display : -webkit-box;
-  -webkit-box-orient : vertical;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
+
 /**
  * Dragdealer JS v0.9.5
  * http://code.ovidiu.ch/dragdealer-js
@@ -49,6 +83,8 @@ html, body {
  * MIT License
  * http://legal.ovidiu.ch/licenses/MIT
  */
+
+$dragdealerBar: #EB8921;
 
 .dragdealer {
   position: relative;
@@ -66,7 +102,7 @@ html, body {
 .dragdealer .red-bar {
   width: 40px;
   height: 10px;
-  background: #CC0000;
+  background: $dragdealerBar;
   color: #FFF;
   line-height: 10px;
   text-align: center;
@@ -76,7 +112,7 @@ html, body {
 .dragdealer .pitch-bar {
   width: 20px;
   height: 10px;
-  background: #CC0000;
+  background: $dragdealerBar;
   color: #FFF;
   line-height: 10px;
   text-align: center;

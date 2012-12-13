@@ -10,13 +10,15 @@ Ext.define("NextDJ.view.Mixer", {
     config : {
         cls              : 'mixer-component',
         styleHtmlContent : true,
+        leftFader        : null,
+        rightFader       : null,
         html             : ''.concat(
             '<div class="mixer">',
                 '<div class="channel left">',
                     '<div class="eq">',
-                        '<input type="text" value="20" class="high left" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
-                        '<input type="text" value="20" class="mid left" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
-                        '<input type="text" value="20" class="low left" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
+                        '<input type="text" value="0" class="high left"  data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
+                        '<input type="text" value="0" class="mid left"   data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
+                        '<input type="text" value="0" class="low left"   data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
                     '</div>',
                     '<div class="dragdealer left">',
                         '<div class="red-bar handle"></div>',
@@ -27,9 +29,9 @@ Ext.define("NextDJ.view.Mixer", {
                         '<div class="red-bar handle"></div>',
                     '</div>',
                     '<div class="eq">',
-                        '<input type="text" value="20" class="high right" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
-                        '<input type="text" value="20" class="mid right" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
-                        '<input type="text" value="20" class="low right" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75>',
+                        '<input type="text" value="0" class="high right" data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
+                        '<input type="text" value="0" class="mid right"  data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
+                        '<input type="text" value="0" class="low right"  data-min=-20 data-max=20 data-displayInput="false" data-angleOffset=-125 data-angleArc=250 data-width=75 data-height=75 data-fgcolor="#FF8A0D">',
                     '</div>',
                 '</div>',
             '</div>'
@@ -50,19 +52,24 @@ Ext.define("NextDJ.view.Mixer", {
         var me         = this,
             element    = me.element,
             leftFader  = element.down('.dragdealer.left').dom,
-            rightFader = element.down('.dragdealer.right').dom;
+            rightFader = element.down('.dragdealer.right').dom,
+            leftDealer,
+            rightDealer;
 
-        new Dragdealer(leftFader, {
+        leftDealer = new Dragdealer(leftFader, {
             horizontal        : false,
             vertical          : true,
             animationCallback : Ext.bind(me.onFaderDrag, me, ['A'], true)
         });
 
-        new Dragdealer(rightFader, {
+        rightDealer = new Dragdealer(rightFader, {
             horizontal        : false,
             vertical          : true,
             animationCallback : Ext.bind(me.onFaderDrag, me, ['B'], true)
         });
+
+        me.setLeftFader(leftDealer);
+        me.setRightFader(rightDealer);
 
         $(".high.left").knob({
             'change' : me.onEQChange
@@ -84,15 +91,21 @@ Ext.define("NextDJ.view.Mixer", {
         });
 
     },
+    setEQValue : function (deckType, eq, value) {
+        var mixerSide = (deckType === "A") ? "left" : "right",
+            selector  = ''.concat('.', eq, '.', mixerSide);
+        $(selector).val(value).trigger('change');
+        Ext.ComponentQuery.query('mixer')[0].fireEvent('eqChange', deckType, eq, value);
+    },
     onEQChange : function (value) {
         var eqClasses = this.i.context.classList,
             eqType    = eqClasses[0],
             deckType  = (eqClasses[1] === "left") ? "A" : "B";
 
         Ext.ComponentQuery.query('mixer')[0].fireEvent('eqChange', deckType, eqType, value);
+
     },
     onFaderDrag : function(x, y, deckType) {
-        console.log(1-y);
         this.fireEvent('setVolume', (1 - y), deckType);
     }
 });
