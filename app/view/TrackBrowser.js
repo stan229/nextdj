@@ -7,7 +7,6 @@
 Ext.define('NextDJ.view.TrackBrowser', {
     extend       : 'Ext.Container',
     xtype        : 'trackbrowser',
-    requires     : ['NextDJ.view.DeckChooserOverlay'],
     config       : {
         cls              : "track-browser-cmp",
         scrollable       : {
@@ -44,9 +43,14 @@ Ext.define('NextDJ.view.TrackBrowser', {
             touchend   : me.onTouchEnd,
             scope      : me
         });
+        // attach drop listener to implement Drag & Drop support
         me.element.dom.addEventListener('drop', Ext.bind(me.onDrop, me), false);
         me.callParent();
     },
+    /**
+     * Drop Listener to add track to FileSystem and Track library
+     * @param evtObj
+     */
     onDrop       : function (evtObj) {
         evtObj.preventDefault();
         var file = evtObj.dataTransfer.files[0];
@@ -67,6 +71,10 @@ Ext.define('NextDJ.view.TrackBrowser', {
             Ext.fly(target).removeCls('tapped');
         }
     },
+    /**
+     * Load track onto a given deck
+     * @param evtObj
+     */
     onTap        : function (evtObj) {
         var track = evtObj.getTarget('.deck-button', null, true),
             dataset;

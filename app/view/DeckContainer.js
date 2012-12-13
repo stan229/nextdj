@@ -1,5 +1,5 @@
 /**
- * Created with JetBrains WebStorm.
+ * Container for Decks A/B and Mixer
  * User: stan229
  * Date: 10/10/12
  * Time: 11:21 AM

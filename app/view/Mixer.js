@@ -1,5 +1,5 @@
 /**
- * Created with JetBrains WebStorm.
+ * Mixer component
  * User: stan229
  * Date: 10/10/12
  * Time: 11:07 AM
@@ -56,6 +56,7 @@ Ext.define("NextDJ.view.Mixer", {
             leftDealer,
             rightDealer;
 
+        // Initialize volume faders
         leftDealer = new Dragdealer(leftFader, {
             horizontal        : false,
             vertical          : true,
@@ -71,6 +72,7 @@ Ext.define("NextDJ.view.Mixer", {
         me.setLeftFader(leftDealer);
         me.setRightFader(rightDealer);
 
+        // Initialize EQ Knobs
         $(".high.left").knob({
             'change' : me.onEQChange
         });
@@ -91,12 +93,22 @@ Ext.define("NextDJ.view.Mixer", {
         });
 
     },
+    /**
+     * Set the EQ value (used from MIDI Controller)
+     * @param deckType
+     * @param eq
+     * @param value
+     */
     setEQValue : function (deckType, eq, value) {
         var mixerSide = (deckType === "A") ? "left" : "right",
             selector  = ''.concat('.', eq, '.', mixerSide);
         $(selector).val(value).trigger('change');
         Ext.ComponentQuery.query('mixer')[0].fireEvent('eqChange', deckType, eq, value);
     },
+    /**
+     * Event listener for when EQ Knob value is changed
+     * @param value
+     */
     onEQChange : function (value) {
         var eqClasses = this.i.context.classList,
             eqType    = eqClasses[0],
@@ -105,6 +117,12 @@ Ext.define("NextDJ.view.Mixer", {
         Ext.ComponentQuery.query('mixer')[0].fireEvent('eqChange', deckType, eqType, value);
 
     },
+    /**
+     * Event listener for when volume fader is dragged
+     * @param x
+     * @param y
+     * @param deckType
+     */
     onFaderDrag : function(x, y, deckType) {
         this.fireEvent('setVolume', (1 - y), deckType);
     }

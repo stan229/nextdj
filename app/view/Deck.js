@@ -1,5 +1,5 @@
 /**
- * Created with JetBrains WebStorm.
+ * Deck Component
  * User: stan229
  * Date: 10/10/12
  * Time: 10:57 AM
@@ -52,6 +52,9 @@ Ext.define("NextDJ.view.Deck", {
         });
         me.initWaveSurfer();
     },
+    /**
+     * Initialize Web Audio Visualization Wrapper
+     */
     initWaveSurfer : function() {
          var me         = this,
             element    = me.element,
@@ -74,7 +77,7 @@ Ext.define("NextDJ.view.Deck", {
             pitchFader = element.down('.dragdealer.pitch').dom,
             dragDealer;
 
-
+        // Initialize Pitch Fader
         dragDealer = new Dragdealer(pitchFader, {
             horizontal        : false,
             vertical          : true,
@@ -86,6 +89,12 @@ Ext.define("NextDJ.view.Deck", {
         });
 
     },
+    /**
+     * Handler for every time the pitch fader is moved
+     * Calculates the new playback rate and sets the pitch offset %
+     * @param x
+     * @param y
+     */
     onFaderDrag : function(x, y) {
         var baseRate     = 0.5 - y,
             pitchOffset  = baseRate.toFixed(2) * 2 * 10,
@@ -99,6 +108,11 @@ Ext.define("NextDJ.view.Deck", {
         }
         this.setPitchOffset(pitchOffset);
     },
+    /**
+     * Event handler for all "tap" events
+     * Checks for Play or Cue Button taps
+     * @param evtObj
+     */
     onTap : function (evtObj) {
         var me         = this,
             playButton = evtObj.getTarget('.play'),
@@ -107,9 +121,15 @@ Ext.define("NextDJ.view.Deck", {
         playButton && me.playPause();
         cueButton  && me.cue();
     },
+    /**
+     * Play/pause this deck
+     */
     playPause : function () {
         this.getWaveSurfer().playPause();
     },
+    /**
+     * Cue deck
+     */
     cue      : function () {
         var me         = this,
             waveSurfer = me.getWaveSurfer(),
@@ -126,6 +146,11 @@ Ext.define("NextDJ.view.Deck", {
 
         me.setCuePosition(cuePosition);
     },
+    /**
+     * Loads a song onto the deck
+     * Instantiates WaveSurfer Wrapper and sets the track title
+     * @param trackName
+     */
     loadSong : function (trackName) {
         this.getWaveSurfer().loadFromFs(trackName);
         this.setTrackTitle(trackName);

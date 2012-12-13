@@ -1,5 +1,7 @@
 /**
- * Created with JetBrains WebStorm.
+ * Main controller
+ * Handles app initiailzation
+ * Handles Mixer and Track Browser events
  * User: stan229
  * Date: 10/10/12
  * Time: 10:43 AM
@@ -42,11 +44,14 @@ Ext.define('NextDJ.controller.Main', {
         me.initFileSystem();
         MIDIUtil.initMIDIMap();
     },
+    /**
+     * Initialize File System API and attach it to Application Namespace
+     */
     initFileSystem : function () {
         var me = this,
             onInitFs = Ext.bind(me.onInitFs, me),
             onInitFsError = Ext.bind(me.onInitFsError, me);
-
+        // request 256MB, can change
         window.webkitStorageInfo.requestQuota(window.PERSISTENT, 256 * 1024 * 1024, function (grantedBytes) {
             window.webkitRequestFileSystem(window.PERSISTENT, grantedBytes, onInitFs, onInitFsError);
         }, function (e) {
@@ -83,6 +88,9 @@ Ext.define('NextDJ.controller.Main', {
 
         console.log('Error: ' + msg);
     },
+    /**
+     * Read FileSystem to get all the tracks and update the TrackBrowser with the track library
+     */
     loadTracks     : function () {
         var me = this,
             trackBrowser = me.getTrackBrowser(),
@@ -105,6 +113,11 @@ Ext.define('NextDJ.controller.Main', {
         });
 
     },
+    /**
+     * Event handler for setting mixer deck volume
+     * @param volume
+     * @param deckType
+     */
     onSetVolume    : function (volume, deckType) {
         var deck = Ext.ComponentQuery.query('deck[deckType="' + deckType + '"]')[0],
             backend = deck.getWaveSurfer().backend,
@@ -116,25 +129,39 @@ Ext.define('NextDJ.controller.Main', {
             backend.gainNode.gain.value = newVol;
         }
     },
+    /**
+     * Event handler for setting mixer EQ
+     * @param deckType
+     * @param eq
+     * @param value
+     */
     onEqChange     : function (deckType, eq, value) {
         var deck = Ext.ComponentQuery.query('deck[deckType="' + deckType + '"]')[0],
             backend = deck.getWaveSurfer().backend;
 
         backend[eq + 'EQ'].gain.value = value;
     },
+    /**
+     * Event handler for loading track onto deck from track browser
+     * @param track
+     * @param deckType
+     */
     onLoadTrack    : function (track, deckType) {
         var deck = Ext.ComponentQuery.query('deck[deckType="' + deckType + '"]')[0];
 
         deck.loadSong(track);
     },
+    /**
+     * Event handler for adding a track to the file system from drop on track browser or deck
+     * @param file
+     * @param deckType
+     */
     onAddTrack     : function (file, deckType) {
-        debugger;
         var me = this,
             fs = me.getApplication().fileSystem;
 
         fs.root.getFile(file.name, {create : true, exclusive : true}, function (fileEntry) {
             fileEntry.createWriter(function (fileWriter) {
-                debugger;
                 fileWriter.write(file);
                 me.loadTracks();
                 deckType && me.onLoadTrack(file.name, deckType);

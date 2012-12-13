@@ -1,3 +1,7 @@
+/**
+ * Main View entry point
+ * User: stan229
+ */
 Ext.define("NextDJ.view.Main", {
     extend   : 'Ext.Container',
     xtype    : 'main',
