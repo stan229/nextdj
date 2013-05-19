@@ -103,7 +103,7 @@ Ext.define('NextDJ.controller.Main', {
 
         dirReader.readEntries(function (results) {
             resultsLength = results.length;
-
+            
             for (; i < resultsLength; i++) {
                 track = results[i];
                 tracks.push(track.name);

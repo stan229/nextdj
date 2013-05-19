@@ -44,6 +44,7 @@ Ext.define('NextDJ.view.TrackBrowser', {
             scope      : me
         });
         // attach drop listener to implement Drag & Drop support
+        me.element.dom.addEventListener('dragover', Ext.bind(me.onDragEnd, me), false);
         me.element.dom.addEventListener('drop', Ext.bind(me.onDrop, me), false);
         me.callParent();
     },
@@ -52,6 +53,7 @@ Ext.define('NextDJ.view.TrackBrowser', {
      * @param evtObj
      */
     onDrop       : function (evtObj) {
+        evtObj.stopPropagation();
         evtObj.preventDefault();
         var file = evtObj.dataTransfer.files[0];
         this.fireEvent('addTrack', file);
